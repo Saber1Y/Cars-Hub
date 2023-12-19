@@ -13,7 +13,7 @@ const Hero = () => {
     return (
         <div className='hero'>
             <div className='flex-1 pt-36 px-2'>
-                <h1 className='hero__title'>
+                <h1 className='hero__title text-[#2b59ff]'>
                     Find, book, rent a car quick and super easy!
                 </h1>
 
