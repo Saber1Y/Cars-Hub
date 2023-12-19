@@ -11,7 +11,6 @@
   font-family: "Manrope", sans-serif;
 }
 
-/* START: General styles */
 .max-width {
   @apply max-w-[1440px] mx-auto;
 }
@@ -35,9 +34,7 @@
 .custom-btn {
   @apply flex flex-row relative justify-center items-center py-3 px-6 outline-none;
 }
-/* END: General styles */
 
-/* START: Hero styles */
 .hero {
   @apply flex xl:flex-row flex-col gap-5 relative z-0 max-w-[1440px] mx-auto;
 }
@@ -61,9 +58,7 @@
 .hero__image-overlay {
   @apply absolute xl:-top-24 xl:-right-1/2 -right-1/4 bg-hero-bg bg-repeat-round -z-10 w-full xl:h-screen h-[590px] overflow-hidden;
 }
-/* END: Hero styles */
 
-/* START: Home styles */
 
 .home__text-container {
   @apply flex flex-col items-start justify-start gap-y-2.5 text-black-100;
@@ -84,9 +79,7 @@
 .home__error-container {
   @apply mt-16 flex justify-center items-center flex-col gap-2;
 }
-/* END: Home styles */
 
-/* START: Car Card styles */
 .car-card {
   @apply flex flex-col p-6 justify-center items-start text-black-100 bg-primary-blue-100 hover:bg-white hover:shadow-md rounded-3xl;
 }
@@ -216,3 +209,5 @@
 .search-manufacturer__option {
   @apply cursor-default select-none py-2 pl-10 pr-4;
 }
+
+
