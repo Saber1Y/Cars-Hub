@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { footerLinks } from '../constants/data'
 
 
 const Footer = () => {
@@ -13,10 +14,30 @@ const Footer = () => {
             Car's hub 2023 <br />
             All Rights Reserved &copy;
           </p>
-
+        </div>
+        <div className='footer__links'>
+        {footerLinks.map((link) => (
+          <div className='footer__link' key={link.title}>
+            <h3 className='font-bold'>{link.title}</h3>
+            {link.links.map((item) => (
+              <Link key={item.title} href={item.url} className='text-black'>
+                {item.title}
+                </Link>
+            ))}
+          </div>
+        ))}
+        </div>
         </div>
 
-      </div>
+        
+          <div className='footer__copyrights-link'>
+            <Link href="/" className='tet-gray-500'>
+              Privacy policy
+            </Link>
+            <Link href="/" className='tet-gray-500'>
+              Terms Of Use
+            </Link>
+          </div>
     </footer>
   )
 }
