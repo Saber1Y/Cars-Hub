@@ -18,7 +18,7 @@ const CustomButton = ({
       disabled={isDisabled}
       type={btnType}
       onClick={handleClick}
-      className={`custom-btn ${containerStyles}`}
+      className={`custom-btn hover:bg-blue-200  ${containerStyles}`}
     >
       <span className='flex 1'>{title}</span>   
     </button>
