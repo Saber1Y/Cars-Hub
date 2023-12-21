@@ -10,5 +10,13 @@ const customButtonProps = {
     },
   };
   
+  const searchManuFacturerProps = {
+    manufacturer: '',
+    setManuFacturer: function(manufacturer) {
+      console.log('Selected manufacturer:', manufacturer);
+      
+    },
+  };
+  
 
-  export default customButtonProps;
+  export { customButtonProps, searchManuFacturerProps}
