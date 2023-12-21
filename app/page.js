@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Hero } from '../index'
+import { Hero, CustomFilter, Searchbar } from '../index'
 
 
 export default function Home() {
@@ -14,13 +14,13 @@ export default function Home() {
         </div>
 
         <div className='home__filters'>
-          {/* <SearchBar /> */}
+          <Searchbar />
+          <div className='home__filter-container'>
+            <CustomFilter  title='fuel' />
+           <CustomFilter  title='year' />
+          </div>
         </div>
 
-        <div className='home__filter-container'>
-          {/* <CustomFiler  title='fuel' />
-          <CustomFiler  title='year' /> */}
-        </div>
       </div>
     </main>
   )
