@@ -11,6 +11,7 @@ module.exports = {
       fontFamily: {
         inter: ["Inter", "sans-serif"],
       },
+    
       colors: {
         "black-100": "#2B2C35",
         "primary-blue": {
