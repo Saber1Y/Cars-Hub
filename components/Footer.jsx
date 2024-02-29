@@ -11,7 +11,7 @@ const Footer = () => {
         <div className='flex flex-col items-start gap-6'>
           <Image src="/logo.svg" alt="cars hub logo" width={118} height={18} className='object-contain'/>
           <p className='text-gray-500 text-normal'>
-            Car's hub 2023 <br />
+            Car&apos; hub 2023 <br />
             All Rights Reserved &copy;
           </p>
         </div>
