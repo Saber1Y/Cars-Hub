@@ -31,17 +31,17 @@ export default async function Home() {
           </div>
         </div>
 
-      {!emptyData ? (
-        <div>
-          We have Cars
-        </div>
-      ) : 
-      <div className='home__error-container'>
-        <h2 className='text-black text-xl'>Sorry, cant find any...</h2>
-        <p>{allCars?.message}</p>
+        {!emptyData ? (
+          <div>
+            We have Cars
+          </div>
+        ) :
+          <div className='home__error-container'>
+            <h2 className='text-black text-xl'>Sorry, cant find any...</h2>
+            <p>{allCars?.message}</p>
 
-      </div>
-      }
+          </div>
+        }
 
       </div>
     </main>
