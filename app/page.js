@@ -1,4 +1,3 @@
-
 import Image from 'next/image'
 import { Hero, CustomFilter, Searchbar } from '../index'
 import { fetchCars } from '@/utils'
@@ -39,10 +38,8 @@ export default async function Home() {
           <div className='home__error-container'>
             <h2 className='text-black text-xl'>Sorry, cant find any...</h2>
             <p>{allCars?.message}</p>
-
           </div>
         }
-
       </div>
     </main>
   )
