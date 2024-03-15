@@ -5,7 +5,7 @@ import { footerLinks } from "../constants/data";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col mt-5 border-t border-gray-100 text-white bg-black">
+    <footer className="flex flex-col mt-5 border-t border-gray-100 text-black-300 bg-white">
       <div className="flex max-md:flex-col flex-wrap justify-between gap-5 px-6 py-10">
         <div className="flex flex-col items-start gap-6">
           <Image
@@ -15,7 +15,7 @@ const Footer = () => {
             height={18}
             className="object-contain"
           />
-          <p className="text-white text-normal">
+          <p className="text-black text-normal">
             Car&apos; hub 2023 <br />
             All Rights Reserved &copy;
           </p>
@@ -23,12 +23,14 @@ const Footer = () => {
         <div className="footer__links">
           {footerLinks.map((link) => (
             <div className="footer__link" key={link.title}>
-              <h3 className="font-bold">{link.title}</h3>
+              <h3 className="font-bold cursor-pointer text-black-300">
+                {link.title}
+              </h3>
               {link.links.map((item) => (
                 <Link
                   key={item.title}
                   href={item.url}
-                  className="text-white  hover:text-blue-500"
+                  className="text-black-300  hover:text-blue-500"
                 >
                   {item.title}
                 </Link>
