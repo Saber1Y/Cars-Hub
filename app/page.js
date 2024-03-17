@@ -6,11 +6,11 @@ import { fetchCars } from '@/utils'
 
 export default async function Home() {
 
-  // const allCars = await fetchCars();
+  const allCars = await fetchCars();
 
-  // const emptyData = !Array.isArray(allCars) || allCars.length < 1 || !allCars;
+  const emptyData = !Array.isArray(allCars) || allCars.length < 1 || !allCars;
 
-  // console.log(allCars);
+  console.log(allCars);
 
   return (
     <main className="overflow-hidden">
@@ -35,11 +35,11 @@ export default async function Home() {
             We have Cars
           </div>
         ) : */}
-          <div className='home__error-container'>
-            <h2 className='text-black text-xl'>Sorry, cant find any...</h2>
-            {/* <p>{allCars?.message}</p> */}
-          </div>
-        
+        <div className='home__error-container'>
+          <h2 className='text-black text-xl'>Sorry, cant find any...</h2>
+          {/* <p>{allCars?.message}</p> */}
+        </div>
+
       </div>
     </main>
   )
