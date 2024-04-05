@@ -6,6 +6,7 @@ import Searchbar from "./components/Searchbar";
 import CustomFilter from "./components/CustomFilter";
 import SearchManufac from "./components/SearchManufac";
 import CardCard from "./components/CardCard";
+import CarDetials from "./components/CarDetials";
 
 
 export {
@@ -16,5 +17,6 @@ export {
     Searchbar,
     CustomFilter,
     SearchManufac,
-    CardCard
+    CardCard,
+    CarDetials
 }

@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { fetchCars } from "@/utils";
 import { CustomButton } from "..";
+import { CarDetials } from "..";
 
 const CardCard = ({ car }) => {
 
@@ -59,6 +60,8 @@ const CardCard = ({ car }) => {
             <CustomButton title="View More" containerStyles="w-full py-[16px] rounded-full bg-primary-blue" textStyles="text-white text-[14px] leading-17px font-bold" rightIcon="/right-arrow.svg" handleClick={() => SetTrue(true)}  />
         </div>
       </div>
+
+      <CarDetials open={open} closeModal={() => setOpen(false)} car={car} />
     </div>
   );
 };
