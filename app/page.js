@@ -8,7 +8,9 @@ export default async function Home() {
 
   const allCars = await fetchCars();
 
+  //Nocars fetched
   const emptyData = !Array.isArray(allCars) || allCars.length < 1 || !allCars;
+
 
   console.log(allCars);
 
@@ -30,15 +32,17 @@ export default async function Home() {
           </div>
         </div>
 
-        {/* {!emptyData ? (
-          <div>
-            We have Cars
+        {!emptyData ? (
+          <div className='home__cars-wrapper'>
+            {allCars?.map((car) => (
+              <CardCard car={car} />
+            ))}
           </div>
-        ) : */}
-        <div className='home__error-container'>
-          <h2 className='text-black text-xl'>Sorry, cant find any...</h2>
-          {/* <p>{allCars?.message}</p> */}
-        </div>
+        ) :
+          <div className='home__error-container'>
+            <h2 className='text-black text-xl'>Sorry, cant find any...</h2>
+            <p>{allCars?.message}</p>
+          </div>}
 
       </div>
     </main>

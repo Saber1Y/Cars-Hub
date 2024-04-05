@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Searchbar from "./components/Searchbar";
 import CustomFilter from "./components/CustomFilter";
 import SearchManufac from "./components/SearchManufac";
+import CardCard from "./components/CardCard";
 
 
 export {
@@ -14,5 +15,6 @@ export {
     Footer,
     Searchbar,
     CustomFilter,
-    SearchManufac
+    SearchManufac,
+    CardCard
 }
