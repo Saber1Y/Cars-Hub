@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Hero, CustomFilter, Searchbar } from '../index'
+import { Hero, CustomFilter, Searchbar, CardCard } from '../index'
 import { fetchCars } from '@/utils'
 
 
@@ -34,8 +34,8 @@ export default async function Home() {
 
         {!emptyData ? (
           <div className='home__cars-wrapper'>
-            {allCars?.map((car) => (
-              <CardCard car={car} />
+            {allCars?.map((car, id) => (
+              <CardCard car={car} key={id} />
             ))}
           </div>
         ) :
