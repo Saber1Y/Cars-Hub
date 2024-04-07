@@ -89,6 +89,23 @@ const CarDetials = ({ car, open, closeModal }) => {
                       </div>
                     </div>
                   </div>
+                  <div className="flex-1 flex flex-col gap-2">
+                    <h2 className="font-semibold text-xl capitalize ml-2">
+                      {car.make} {car.model}{" "}
+                    </h2>
+
+                    <div className="mt-3 flex flex-wrap gap-4">
+                      {Object.entries(car).map(([key, value]) => (
+                        <div
+                          className="flex justify-between w-full gap-5 text-right mx-4"
+                          key={key}
+                        >
+                          <h4>{key}</h4>
+                          <p>{value}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </Dialog.Panel>
               </Transition.Child>
             </div>

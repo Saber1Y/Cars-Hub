@@ -8,7 +8,7 @@ export default async function Home() {
 
   const allCars = await fetchCars();
 
-  //Nocars fetched
+  //if Nocars gets fetched
   const emptyData = !Array.isArray(allCars) || allCars.length < 1 || !allCars;
 
 
