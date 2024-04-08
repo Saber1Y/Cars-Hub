@@ -1,5 +1,3 @@
-
-
 export async function fetchCars() {
     const headers = {
         'X-RapidAPI-Key': 'f746eb062fmsh70adfb33544717fp1515bcjsn6d2e53d0f0ba',
@@ -13,3 +11,7 @@ export async function fetchCars() {
     const result = await res.json();
     return result;
 }
+
+const axios = require('axios');
+
+const  api_key = 

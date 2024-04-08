@@ -100,8 +100,10 @@ const CarDetials = ({ car, open, closeModal }) => {
                           className="flex justify-between w-full gap-5 text-right mx-4"
                           key={key}
                         >
-                          <h4>{key}</h4>
-                          <p>{value}</p>
+                          <h4 className="capitalize text-gray">
+                            {key.split("_").join(" ")}
+                          </h4>
+                          <p className="text-black-200">{value}</p>
                         </div>
                       ))}
                     </div>
