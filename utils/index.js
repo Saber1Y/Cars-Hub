@@ -12,6 +12,6 @@ export async function fetchCars() {
     return result;
 }
 
-const axios = require('axios');
-
-const  api_key = 
+export const generateCarImage = () => {
+    const url = new URL('https://cdn.imagin.studio/getimage')
+}
