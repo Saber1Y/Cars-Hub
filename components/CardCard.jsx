@@ -2,13 +2,12 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { fetchCars } from "@/utils";
+import { fetchCars, generateCarImage } from "@/utils";
 import { CustomButton } from "..";
 import { CarDetials } from "..";
 
 const CardCard = ({ car }) => {
-
-    const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
   return (
     <div className="car-card group">
@@ -20,7 +19,7 @@ const CardCard = ({ car }) => {
 
       <div className="relative w-full h-40 object-contain my-3">
         <Image
-          src="/hero.png"
+          src={generateCarImage(car)}
           alt="car"
           fill
           priority
@@ -57,7 +56,13 @@ const CardCard = ({ car }) => {
         </div>
 
         <div className="car-card__btn-container">
-            <CustomButton title="View More" containerStyles="w-full py-[16px] rounded-full bg-primary-blue" textStyles="text-white text-[14px] leading-17px font-bold" rightIcon="/right-arrow.svg" handleClick={() => setOpen(true)}  />
+          <CustomButton
+            title="View More"
+            containerStyles="w-full py-[16px] rounded-full bg-primary-blue"
+            textStyles="text-white text-[14px] leading-17px font-bold"
+            rightIcon="/right-arrow.svg"
+            handleClick={() => setOpen(true)}
+          />
         </div>
       </div>
 

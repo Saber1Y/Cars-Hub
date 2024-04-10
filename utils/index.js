@@ -12,6 +12,17 @@ export async function fetchCars() {
     return result;
 }
 
-export const generateCarImage = () => {
-    const url = new URL('https://api.unsplash.com/');
-}
+export const generateCarImage = (car, fullscreen, angle) => {
+    const url = new URL('https://cdn.imagin.studio/getimage');
+
+    const { make, model, year } = car;
+
+    url.searchParams.append('customer', "hrjavascript-mastery");
+    url.searchParams.append("make", make);
+    url.searchParams.append("modelFamily", model.split(" ")[0]);
+    url.searchParams.append("modelYear", `${year}`);
+    url.searchParams.append('zoomType', fullscreen.toString());
+    url.searchParams.append('angle', `${angle}`);
+
+    return url.toString();
+};
