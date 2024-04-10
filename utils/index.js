@@ -13,5 +13,5 @@ export async function fetchCars() {
 }
 
 export const generateCarImage = () => {
-    const url = new URL('https://cdn.imagin.studio/getimage')
+    const url = new URL('https://api.unsplash.com/');
 }
