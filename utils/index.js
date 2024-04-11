@@ -4,7 +4,7 @@ export async function fetchCars() {
         'X-RapidAPI-Host': 'cars-by-api-ninjas.p.rapidapi.com'
     }
 
-    const res = await fetch('https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=corolla', {
+    const res = await fetch('https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=q3', {
         headers: headers,
     })
 
@@ -12,17 +12,25 @@ export async function fetchCars() {
     return result;
 }
 
-export const generateCarImage = (car, fullscreen, angle) => {
+export const generateCarImage = (car, angle) => {
     const url = new URL('https://cdn.imagin.studio/getimage');
 
     const { make, model, year } = car;
 
     url.searchParams.append('customer', "hrjavascript-mastery");
     url.searchParams.append("make", make);
-    url.searchParams.append("modelFamily", model.split(" ")[0]);
+
+    // if (typeof model === 'string') {
+    //     const modelFamily = model.split(' ')[0];
+    //     url.searchParams.append("modelFamily", modelFamily);
+    // } else {
+    //     console.error("Model is not a valid string:", model);
+
+    // }
+
     url.searchParams.append("modelYear", `${year}`);
-    url.searchParams.append('zoomType', fullscreen.toString());
+    url.searchParams.append('zoomType', 'fullscreen');
     url.searchParams.append('angle', `${angle}`);
 
-    return url.toString();
+    return `${url}`;
 };
