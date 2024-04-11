@@ -52,7 +52,7 @@ const CarDetials = ({ car, open, closeModal }) => {
                   <div className="flex-1 flex flex-col gap-3">
                     <div className="relative w-full h-40 bg-pattern bg-cover bg-center rounded-lg">
                       <Image
-                        src={generateCarImage("car", "29")}
+                        src={generateCarImage("car")}
                         alt="car"
                         fill
                         priority
@@ -63,7 +63,7 @@ const CarDetials = ({ car, open, closeModal }) => {
                     <div className="flex flex-row">
                       <div className="flex-1 relative w-full h-24 rounded-lg">
                         <Image
-                          src={generateCarImage("car", "29")}
+                          src={generateCarImage("car")}
                           alt="car"
                           fill
                           priority
@@ -72,7 +72,7 @@ const CarDetials = ({ car, open, closeModal }) => {
                       </div>
                       <div className="flex-1 relative w-full h-24 rounded-lg">
                         <Image
-                          src={generateCarImage("car", "33")}
+                          src={generateCarImage("car")}
                           alt="car"
                           fill
                           priority
@@ -81,7 +81,7 @@ const CarDetials = ({ car, open, closeModal }) => {
                       </div>
                       <div className="flex-1 relative w-full h-24 rounded-lg">
                         <Image
-                          src={generateCarImage("car", "13")}
+                          src={generateCarImage("car")}
                           alt="car"
                           fill
                           priority
