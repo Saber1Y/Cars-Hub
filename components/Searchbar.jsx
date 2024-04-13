@@ -17,7 +17,6 @@ const Searchbar = () => {
           manufacturer={manufacturer}
           setManufacturer={setManufacturer}
         />
-        <SearchButton otherstyles="sm:hidden " />
       </div>
 
       <div className="searchbar__item">
@@ -37,7 +36,9 @@ const Searchbar = () => {
           placeholder="model"
           className="searchbar__input"
         />
+        <SearchButton otherstyles="sm:hidden " />
       </div>
+      <SearchButton otherstyles="max-sm:hidden" />
     </form>
   );
 };
