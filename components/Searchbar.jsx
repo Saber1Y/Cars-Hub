@@ -3,11 +3,14 @@ import React, { useState } from "react";
 import { SearchManufac } from "..";
 import SearchButton from "./SearchButton";
 import Image from "next/image";
-import { URLSearchParams } from "url";
+// import { router } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 const Searchbar = () => {
   const [modal, setModal] = useState("");
   const [manufacturer, setManufacturer] = useState("");
+
+  const router = useRouter();
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -15,6 +18,11 @@ const Searchbar = () => {
     if (manufacturer === "" && modal === "") {
       return alert("Please add car");
     }
+
+    updatedSearchParams(
+      modal.toLocaleLowerCase(),
+      manufacturer.toLocaleLowerCase()
+    );
   };
 
   const updatedSearchParams = (modal, manufacturer) => {
@@ -31,6 +39,12 @@ const Searchbar = () => {
     } else {
       searchParams.delete("manufacturer");
     }
+
+    const newPathname = `${
+      window.location.pathname
+    }?${searchParams.toString()}`;
+
+    router.push(newPathname);
   };
 
   return (
@@ -42,7 +56,7 @@ const Searchbar = () => {
         />
       </div>
 
-      <div className="searchbar__item">
+      {/* <div className="searchbar__item">
         <Image
           src="/model-icon.png"
           width={25}
@@ -55,12 +69,13 @@ const Searchbar = () => {
           type="text"
           name="model"
           value={modal}
-          onClick={(e) => setModal(e.target.value)}
+          onChange={(e) => setModal(e.target.value)}
           placeholder="model"
           className="searchbar__input"
         />
         <SearchButton otherClasses="sm:hidden " />
-      </div>
+      </div> */}
+      
       <SearchButton otherClasses="max-sm:hidden" />
     </form>
   );

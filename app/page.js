@@ -4,9 +4,16 @@ import { fetchCars } from '@/utils'
 
 
 
-export default async function Home() {
+export default async function Home({ searchParams }) {
 
-  const allCars = await fetchCars();
+  const allCars = await fetchCars({
+    manufacturer: searchParams.manufacturer,
+    year: searchParams.year || '2022',
+    fuel: searchParams.fuel,
+    limit: searchParams.limit || '10'
+  });
+
+
 
   //if Nocars gets fetched
   const emptyData = !Array.isArray(allCars) || allCars.length < 1 || !allCars;

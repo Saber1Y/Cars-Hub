@@ -1,10 +1,15 @@
-export async function fetchCars() {
+export async function fetchCars({ filter }) {
+
+    const [manufacturer, limit, year, fuel] = filter;
+
+
+
     const headers = {
         'X-RapidAPI-Key': 'f746eb062fmsh70adfb33544717fp1515bcjsn6d2e53d0f0ba',
         'X-RapidAPI-Host': 'cars-by-api-ninjas.p.rapidapi.com'
     }
 
-    const res = await fetch('https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=carrera', {
+    const res = await fetch(`https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?make=${manufacturer}&year=${year}&limit=${limit}&fuel_type=${fuel}`, {
         headers: headers,
     })
 
