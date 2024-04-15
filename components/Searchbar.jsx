@@ -3,12 +3,35 @@ import React, { useState } from "react";
 import { SearchManufac } from "..";
 import SearchButton from "./SearchButton";
 import Image from "next/image";
+import { URLSearchParams } from "url";
 
 const Searchbar = () => {
   const [modal, setModal] = useState("");
-  const [manufacturer, setManufacturer] = useState();
+  const [manufacturer, setManufacturer] = useState("");
 
-  const handleSearch = () => {};
+  const handleSearch = (e) => {
+    e.preventDefault();
+
+    if (manufacturer === "" && modal === "") {
+      return alert("Please add car");
+    }
+  };
+
+  const updatedSearchParams = (modal, manufacturer) => {
+    const searchParams = new URLSearchParams(window.location.search);
+
+    if (modal) {
+      searchParams.set("modal", modal);
+    } else {
+      searchParams.delete("modal");
+    }
+
+    if (manufacturer) {
+      searchParams.set("manufacturer", manufacturer);
+    } else {
+      searchParams.delete("manufacturer");
+    }
+  };
 
   return (
     <form className="searchbar" onSubmit={handleSearch}>
@@ -36,9 +59,9 @@ const Searchbar = () => {
           placeholder="model"
           className="searchbar__input"
         />
-        <SearchButton otherstyles="sm:hidden " />
+        <SearchButton otherClasses="sm:hidden " />
       </div>
-      <SearchButton otherstyles="max-sm:hidden" />
+      <SearchButton otherClasses="max-sm:hidden" />
     </form>
   );
 };
