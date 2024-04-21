@@ -1,7 +1,6 @@
 export async function fetchCars({ filter }) {
 
-    const [manufacturer, limit, year, fuel] = filter;
-
+    // const [manufacturer, limit, year, fuel] = filter;
 
 
     const headers = {
@@ -9,18 +8,18 @@ export async function fetchCars({ filter }) {
         'X-RapidAPI-Host': 'cars-by-api-ninjas.p.rapidapi.com'
     }
 
-    const res = await fetch(`https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?make=${manufacturer}&year=${year}&limit=${limit}&fuel_type=${fuel}`, {
+    const res = await fetch(`https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=camaro`, {
         headers: headers,
     })
 
     const result = await res.json();
-    return result;
+    return result;x
 }
 
 export const generateCarImage = (car, angle) => {
     const url = new URL('https://cdn.imagin.studio/getimage');
 
-    const { make, model, year } = car;
+    const { make, modal, year } = car;
 
     url.searchParams.append('customer', "hrjavascript-mastery");
     url.searchParams.append("make", make);

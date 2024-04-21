@@ -56,7 +56,7 @@ const Searchbar = () => {
         />
       </div>
 
-      {/* <div className="searchbar__item">
+      <div className="searchbar__item">
         <Image
           src="/model-icon.png"
           width={25}
@@ -74,7 +74,7 @@ const Searchbar = () => {
           className="searchbar__input"
         />
         <SearchButton otherClasses="sm:hidden " />
-      </div> */}
+      </div>
       
       <SearchButton otherClasses="max-sm:hidden" />
     </form>
