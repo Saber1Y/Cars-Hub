@@ -13,7 +13,7 @@ export async function fetchCars({ filter }) {
     })
 
     const result = await res.json();
-    return result;x
+    return result;
 }
 
 export const generateCarImage = (car, angle) => {
