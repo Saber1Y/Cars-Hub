@@ -17,20 +17,11 @@ export async function fetchCars({ filter }) {
 }
 
 export const generateCarImage = (car, angle) => {
-    const url = new URL('https://cdn.imagin.studio/getimage');
+    const url = new URL('https://cdn.imagin.studio');
 
-    const { make, modal, year } = car;
+    const { make, year } = car;
 
-    url.searchParams.append('customer', "hrjavascript-mastery");
     url.searchParams.append("make", make);
-
-    // if (typeof model === 'string') {
-    //     const modelFamily = model.split(' ')[0];
-    //     url.searchParams.append("modelFamily", modelFamily);
-    // } else {
-    //     console.error("Model is not a valid string:", model);
-
-    // }
 
     url.searchParams.append("modelYear", `${year}`);
     url.searchParams.append('zoomType', 'fullscreen');

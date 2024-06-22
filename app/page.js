@@ -3,7 +3,6 @@ import { Hero, CustomFilter, Searchbar, CardCard } from '../index'
 import { fetchCars } from '@/utils'
 
 
-
 export default async function Home({ searchParams }) {
 
   const allCars = await fetchCars({
@@ -14,14 +13,12 @@ export default async function Home({ searchParams }) {
   });
 
 
-
   //if Nocars gets fetched
   const emptyData = !Array.isArray(allCars) || allCars.length < 1 || !allCars;
 
   return (
     <main className="overflow-hidden">
       <Hero />
-
       <div className='mt-10 padding-x padding-y max-width' id='discover'>
         <div className='home__container'>
           <h1 className='text-black text-4xl font-extrabold'>Car&apos; Catalogue <span className='text-blue-500 text-normal'>:</span> </h1>
